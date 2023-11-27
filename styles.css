@@ -13,7 +13,7 @@ body {
     need to give height first
     */
   min-height: 100vh; /*it will make it center*/
-  background-color: #212121;
+  background-color: #008000;
 }
 
 .container {
@@ -23,8 +23,8 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 0, 0);
+  border: 2px solid rgba(255, 0, 0, 0.25);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ body {
   position: absolute;
   transform: rotate(
     calc(30deg * var(--i))
-  ); /*as there are 12 hours
+  ); /*here var() is a custom css varialbe and as there are 12 hours
     and it is 360 degree circle we can 360/12 = 30 degree and we are multiplying
     it var(--i) if i = 3 than it will 30 * 3 degree*/
   inset: 12px; /*if not set inset it will not bring the digits in center*/

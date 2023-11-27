@@ -17,7 +17,7 @@ m minutes = 6m
 1 second = 360/60 = 6 degree
 s second = 6s 
 
-https://youtube.com/watch?v=4ul3q-cEhvU&t=942s
+
  */
 
 function displayTime() {
