@@ -1,48 +1,75 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    color:#fff
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #fff;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center; /*it will make it vertically center but we 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center; /*it will make it vertically center but we 
     need to give height first
     */
-    min-height: 100vh; /*it will make it center*/
-background-color: #212121;
+  min-height: 100vh; /*it will make it center*/
+  background-color: #212121;
 }
 
-.container{
-    position: relative;
+.container {
+  position: relative;
 }
-.clock{
-    
-    width: 300px;
-   height: 300px;
-   border-radius: 50%; 
-   background-color: rgba(255, 255, 255, 0.1);
-   border: 2px solid  rgba(255, 255, 255, 0.25);
-   box-shadow: 0px 0px 30px rgba(0,0,0,0.9);
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.clock span{
-    position: absolute;
-    transform: rotate(calc(30deg * var(--i))); /*as there are 12 hours
+.clock span {
+  position: absolute;
+  transform: rotate(
+    calc(30deg * var(--i))
+  ); /*as there are 12 hours
     and it is 360 degree circle we can 360/12 = 30 degree and we are multiplying
     it var(--i) if i = 3 than it will 30 * 3 degree*/
-    inset: 12px; /*if not set inset it will not bring the digits in center*/
-    text-align: center;   /*text-align center will bring digits inside the circle border*/ 
+  inset: 12px; /*if not set inset it will not bring the digits in center*/
+  text-align: center; /*text-align center will bring digits inside the circle border*/
 }
 
-
-.clock span b{ /* we need to transform b tag transform rotate to negative value -30deg to 
+.clock span b {
+  /* we need to transform b tag transform rotate to negative value -30deg to 
     make all the digits  vertically straight*/
-    transform: rotate(calc(-30deg * var(--i)));
-    display: inline-block; /*we need to inline-block because it is default is block*/
-    font-size: 20px;
+  transform: rotate(calc(-30deg * var(--i)));
+  display: inline-block; /*we need to inline-block because it is default is block*/
+  font-size: 20px;
 }
 
+.clock::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.hand {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hand i {
+  position: absolute;
+  background-color: var(--clr);
+  width: 4px;
+  height: var(--h);
+  border-radius: 8px;
+}
