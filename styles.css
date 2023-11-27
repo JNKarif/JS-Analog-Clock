@@ -39,8 +39,10 @@ background-color: #212121;
 }
 
 
-.clock span b{
+.clock span b{ /* we need to transform b tag transform rotate to negative value -30deg to 
+    make all the digits  vertically straight*/
     transform: rotate(calc(-30deg * var(--i)));
-    display: inline-block;
+    display: inline-block; /*we need to inline-block because it is default is block*/
     font-size: 20px;
 }
+
